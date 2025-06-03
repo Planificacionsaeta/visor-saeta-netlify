@@ -4,9 +4,9 @@
   "description": "Visor de Desvíos de Transporte SAETA",
   "main": "index.tsx",
   "scripts": {
-    "build": "esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime && echo F | xcopy .\\index.html .\\dist\\index.html /Y && echo F | xcopy .\\metadata.json .\\dist\\metadata.json /Y",
+    "build": "npx esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime && cp ./index.html ./dist/index.html && cp ./metadata.json ./dist/metadata.json",
     "deploy": "npm run build && gh-pages -f -d dist",
-    "start": "esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime --servedir=. --port=3000",
+    "start": "npx esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime --servedir=. --port=3000",
     "start:prod": "serve -s dist -l ${PORT:-8080}"
   },
   "keywords": [
