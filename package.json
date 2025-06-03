@@ -1,0 +1,29 @@
+{
+  "name": "desvios-saeta-app",
+  "version": "1.0.0",
+  "description": "Visor de Desvíos de Transporte SAETA",
+  "main": "index.tsx",
+  "scripts": {
+    "build": "esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime && cp ./index.html ./dist/index.html && cp ./metadata.json ./dist/metadata.json",
+    "deploy": "npm run build && gh-pages -f -d dist",
+    "start": "esbuild index.tsx --bundle --outfile=dist/bundle.js --jsx=automatic --platform=browser --format=esm --external:react --external:react-dom --external:react-dom/client --external:react/jsx-runtime --servedir=. --port=3000",
+    "start:prod": "serve -s dist -l ${PORT:-8080}"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "saeta",
+    "desvios"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "gh-pages": "^6.0.0"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "serve": "^14.2.0"
+  }
+}

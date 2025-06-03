@@ -1,0 +1,6 @@
+{
+  "name": "Visor de Desvíos de Transporte",
+  "description": "Una aplicación web para visualizar y administrar desvíos del transporte público. Permite a los usuarios ver los desvíos actuales filtrados por corredor o línea, y a los administradores agregar nuevos desvíos.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

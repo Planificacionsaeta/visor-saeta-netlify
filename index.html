@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#0056b3">
+        <title>Desvíos de Líneas SAETA</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script>
+          tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                  primary: {
+                    DEFAULT: '#0056b3', // Darker blue for SAETA, adjust as needed
+                    'hover': '#004085' 
+                  },
+                  dark: {
+                    DEFAULT: '#343a40' // Dark gray, adjust as needed
+                  },
+                }
+              }
+            }
+          }
+        </script>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "react-dom": "https://esm.sh/react-dom@^19.1.0",
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.0/jsx-runtime",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+    </head>
+    <body class="antialiased text-gray-900 bg-gray-100">
+        <noscript>Necesitas habilitar JavaScript para ejecutar esta aplicación.</noscript>
+        <div id="root"></div>
+        <script type="module" src="./bundle.js"></script>
+    </body>
+    </html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
